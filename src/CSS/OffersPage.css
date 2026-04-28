@@ -1,7 +1,14 @@
 .offers-page .page-hero {
-  padding: 70px 24px 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  padding: 56px 80px;
   background: var(--sand);
-  text-align: center;
+}
+
+.offers-page .page-hero-text {
+  max-width: 520px;
 }
 
 .offers-page .page-hero h1 {
@@ -12,9 +19,15 @@
 }
 
 .offers-page .page-hero p {
-  margin: 0 auto;
+  margin: 0;
   font-size: 20px;
   line-height: 1.6;
+}
+
+.offers-page .page-hero img {
+  width: min(100%, 360px);
+  max-height: 260px;
+  object-fit: contain;
 }
 
 .offers-page .offer-container {
@@ -39,6 +52,14 @@
 }
 
 @media (max-width: 980px) {
+  .offers-page .page-hero {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+  }
+
   .offers-page .offer-container {
     padding-left: 24px;
     padding-right: 24px;

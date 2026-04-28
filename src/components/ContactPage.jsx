@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { categories } from "../data/storeData";
+import contactHeroImage from "../assets/page-images/contact-hero.svg";
 import "../CSS/ContactPage.css";
 
 const contactDetails = [
@@ -110,7 +110,7 @@ function ContactPage() {
         </div>
 
         <div className="hero-image">
-          <img src={categories[5].image} alt="Fresh drinks" />
+          <img src={contactHeroImage} alt="Fresh groceries" />
         </div>
       </section>
 

@@ -82,9 +82,7 @@ button {
 }
 
 .nav-links a:hover,
-.nav-links a.active,
-.login-link:hover,
-.login-link.active {
+.nav-links a.active {
   background: rgba(255, 255, 255, 0.12);
   color: var(--gold);
 }

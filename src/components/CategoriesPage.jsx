@@ -1,8 +1,17 @@
+import { useEffect, useState } from "react";
 import CategoryCard from "./cards/CategoryCard";
-import { categories } from "../data/storeData";
+import { apiRequest } from "../api";
 import "../CSS/CategoriesPage.css";
 
 function CategoriesPage() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    apiRequest("/categories")
+      .then(setCategories)
+      .catch(() => setCategories([]));
+  }, []);
+
   return (
     <main className="page categories-page">
       <section className="page-hero centered">
@@ -17,6 +26,7 @@ function CategoriesPage() {
         {categories.map((category) => (
           <CategoryCard key={category.name} category={category} />
         ))}
+        {categories.length === 0 && <p>No categories added yet.</p>}
       </section>
     </main>
   );

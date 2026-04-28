@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Local farm delivery</title>
+  <desc id="desc">A delivery box with fresh produce from local farms.</desc>
+  <rect width="640" height="480" fill="none"/>
+  <ellipse cx="320" cy="408" rx="214" ry="28" fill="#c9b08a" opacity=".45"/>
+  <path d="M150 170h340l42 216H108z" fill="#dacfbd"/>
+  <path d="M150 170h340l-48 74H198z" fill="#bf9861"/>
+  <path d="M198 244h244v142H198z" fill="#f7ead7"/>
+  <path d="M244 150c22-60 88-84 140-48 28 20 44 50 46 88" fill="none" stroke="#7f1100" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="250" cy="260" r="34" fill="#d63b28"/>
+  <circle cx="316" cy="252" r="42" fill="#f0b429"/>
+  <circle cx="390" cy="260" r="34" fill="#4c9f70"/>
+  <path d="M272 214c42-66 92-68 122-4-44 24-84 26-122 4z" fill="#2f7d4b"/>
+  <path d="M320 212c-8 34-6 64 8 92" fill="none" stroke="#02332d" stroke-width="7" stroke-linecap="round"/>
+  <path d="M238 330h164" stroke="#bf9861" stroke-width="16" stroke-linecap="round"/>
+</svg>

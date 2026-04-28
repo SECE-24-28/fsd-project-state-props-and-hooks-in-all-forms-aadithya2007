@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Farm fresh produce</title>
+  <desc id="desc">A farmer market crate filled with vegetables.</desc>
+  <rect width="640" height="480" fill="none"/>
+  <ellipse cx="322" cy="412" rx="218" ry="30" fill="#c9b08a" opacity=".42"/>
+  <path d="M104 206h432v86H104z" fill="#bf9861"/>
+  <path d="M130 292h380l-36 110H166z" fill="#dacfbd"/>
+  <path d="M152 318h326M164 364h312" stroke="#9c7849" stroke-width="14" stroke-linecap="round"/>
+  <path d="M156 188c54-80 124-66 136 18-50 14-96 10-136-18z" fill="#4c9f70"/>
+  <path d="M430 186c-18-92 48-130 104-56-20 48-56 76-104 56z" fill="#2f7d4b"/>
+  <circle cx="236" cy="184" r="46" fill="#d63b28"/>
+  <circle cx="318" cy="168" r="54" fill="#f0b429"/>
+  <circle cx="396" cy="184" r="46" fill="#7f1100"/>
+  <path d="M274 112c44-52 108-48 140 8-42 34-88 38-140-8z" fill="#69a84f"/>
+  <path d="M332 112c-18 34-22 72-12 112" fill="none" stroke="#02332d" stroke-width="8" stroke-linecap="round"/>
+</svg>

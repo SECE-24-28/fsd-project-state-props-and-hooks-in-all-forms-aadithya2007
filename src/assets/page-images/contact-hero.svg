@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Grocery support</title>
+  <desc id="desc">A support message beside fresh groceries.</desc>
+  <rect width="640" height="480" fill="none"/>
+  <ellipse cx="320" cy="406" rx="210" ry="28" fill="#c9b08a" opacity=".42"/>
+  <rect x="118" y="128" width="324" height="226" rx="28" fill="#f7ead7" stroke="#bf9861" stroke-width="16"/>
+  <path d="M150 158l130 104 130-104" fill="none" stroke="#7f1100" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M442 236c46-68 92-70 126-6-42 30-84 34-126 6z" fill="#4c9f70"/>
+  <path d="M486 234c-10 36-8 68 10 94" fill="none" stroke="#02332d" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="446" cy="318" r="34" fill="#d63b28"/>
+  <circle cx="514" cy="324" r="42" fill="#f0b429"/>
+  <path d="M156 340h258" stroke="#dacfbd" stroke-width="18" stroke-linecap="round"/>
+</svg>

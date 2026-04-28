@@ -1,35 +1,93 @@
+.categories-page {
+  background: var(--background);
+  min-height: 100vh;
+}
+
+/* HERO SECTION */
+
 .categories-page .page-hero {
-  padding: 70px 24px 46px;
   background: var(--sand);
   text-align: center;
+  padding: 120px 24px 60px;
 }
 
 .categories-page .page-hero h1 {
   color: var(--green);
   font-size: 56px;
-  line-height: 1.08;
-  margin: 0 0 18px;
+  margin-bottom: 15px;
 }
 
 .categories-page .page-hero p {
-  max-width: 760px;
+  max-width: 700px;
   margin: 0 auto;
+  color: var(--text);
   font-size: 20px;
-  line-height: 1.6;
-  text-align: center;
+  line-height: 1.7;
 }
 
-.categories-page .categories-grid {
+/* CATEGORIES GRID */
+
+.categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+
   gap: 30px;
-  padding: 56px 80px;
+
+  padding: 60px 80px;
 }
 
-@media (max-width: 980px) {
-  .categories-page .categories-grid {
-    padding-left: 24px;
-    padding-right: 24px;
+/* CATEGORY CARD */
+
+.category-card {
+  background: var(--sand);
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+
+  transition: 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card img {
+  width: 120px;
+  height: 120px;
+
+  object-fit: contain;
+}
+
+.category-card h3 {
+  margin-top: 15px;
+
+  color: var(--green);
+
+  font-size: 22px;
+}
+
+.category-card p {
+  color: var(--text);
+
+  margin-top: 10px;
+
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .categories-grid {
+    padding: 40px 25px;
   }
 
   .categories-page .page-hero h1 {
@@ -37,12 +95,20 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 576px) {
+  .categories-page .page-hero {
+    padding: 100px 20px 50px;
+  }
+
   .categories-page .page-hero h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .categories-page .page-hero p {
-    font-size: 17px;
+    font-size: 16px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
   }
 }

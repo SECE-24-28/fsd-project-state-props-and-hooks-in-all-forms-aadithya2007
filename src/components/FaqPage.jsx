@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
-import { categories, faqs } from "../data/storeData";
 import "../CSS/FaqPage.css";
+
+const faqs = [
+  {
+    question: "How does VegiMart deliver fresh groceries?",
+    answer:
+      "VegiMart sources groceries from trusted local farms and suppliers, then packs each order carefully for delivery.",
+  },
+  {
+    question: "How can I place an order on VegiMart?",
+    answer:
+      "Browse products, add items to your cart, and confirm checkout from your account.",
+  },
+];
 
 function FaqPage() {
   return (
@@ -12,9 +24,6 @@ function FaqPage() {
           <Link className="primary-btn" to="/shop">
             Shop Fresh
           </Link>
-        </div>
-        <div className="hero-image">
-          <img src={categories[1].image} alt="Fresh vegetables" />
         </div>
       </section>
 

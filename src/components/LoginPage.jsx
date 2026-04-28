@@ -1,25 +1,24 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../CSS/AuthPage.css";
 
 function LoginPage() {
   const navigate = useNavigate();
+  const { login } = useAuth();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const email = formData.get("email").trim();
     const password = formData.get("password");
-    const savedEmail = localStorage.getItem("email");
-    const savedPassword = localStorage.getItem("password");
 
-    if (email === savedEmail && password === savedPassword) {
-      sessionStorage.setItem("loggedInUser", email);
+    try {
+      const user = await login(email, password);
       alert("Login Successful!");
-      navigate("/");
-      return;
+      navigate(user.role === "admin" ? "/admin" : "/");
+    } catch (error) {
+      alert(error.message);
     }
-
-    alert("Invalid Email or Password.");
   };
 
   return (

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Fresh grocery basket</title>
+  <desc id="desc">A basket with vegetables and fruit for the grocery home page.</desc>
+  <rect width="640" height="480" fill="none"/>
+  <ellipse cx="320" cy="408" rx="214" ry="28" fill="#c9b08a" opacity=".45"/>
+  <path d="M128 214h384l-42 182H170z" fill="#bf9861"/>
+  <path d="M158 246h324l-26 112H184z" fill="#dacfbd"/>
+  <path d="M218 212c18-80 116-106 174-48 20 20 32 47 34 76" fill="none" stroke="#7f1100" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="206" cy="156" r="48" fill="#d63b28"/>
+  <circle cx="252" cy="126" r="42" fill="#f0b429"/>
+  <circle cx="436" cy="156" r="48" fill="#7f1100"/>
+  <path d="M326 88c50 18 72 60 62 118-54 6-96-16-120-62 22-28 44-42 58-56z" fill="#2f7d4b"/>
+  <path d="M320 88c-34 34-46 70-36 108" fill="none" stroke="#02332d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M166 210c50-74 94-82 130-24-30 20-74 26-130 24z" fill="#4c9f70"/>
+  <path d="M430 206c-42-76-18-118 70-124 0 62-22 102-70 124z" fill="#4c9f70"/>
+  <path d="M210 260h280M192 320h264" stroke="#9c7849" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="272" cy="250" r="24" fill="#f5a623"/>
+  <circle cx="338" cy="252" r="24" fill="#d63b28"/>
+  <circle cx="404" cy="250" r="24" fill="#f5a623"/>
+</svg>

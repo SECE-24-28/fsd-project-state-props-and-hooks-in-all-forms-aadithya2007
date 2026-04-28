@@ -1,10 +1,31 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import CategoryCard from "./cards/CategoryCard";
 import ProductCard from "./cards/ProductCard";
-import { categories, featuredProducts } from "../data/storeData";
+import { apiRequest } from "../api";
+import heroImage from "../Images/vegetables.png";
 import "../CSS/HomePage.css";
 
 function HomePage() {
+  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function loadHomeData() {
+      const [categoryData, productData] = await Promise.all([
+        apiRequest("/categories"),
+        apiRequest("/products"),
+      ]);
+      setCategories(categoryData);
+      setProducts(productData);
+    }
+
+    loadHomeData().catch(() => {
+      setCategories([]);
+      setProducts([]);
+    });
+  }, []);
+
   return (
     <main className="page home-page">
       <section className="hero">
@@ -29,7 +50,7 @@ function HomePage() {
           </div>
         </div>
         <div className="hero-image">
-          <img src={categories[1].image} alt="Fresh vegetables" />
+          <img src={heroImage} alt="Fresh groceries" />
         </div>
       </section>
 
@@ -39,15 +60,17 @@ function HomePage() {
           {categories.slice(0, 7).map((category) => (
             <CategoryCard key={category.name} category={category} compact />
           ))}
+          {categories.length === 0 && <p>No categories added yet.</p>}
         </div>
       </section>
 
       <section className="section">
         <h2>Popular Products</h2>
         <div className="product-container">
-          {featuredProducts.slice(0, 4).map((product) => (
+          {products.slice(0, 4).map((product) => (
             <ProductCard key={product.name} product={product} simple />
           ))}
+          {products.length === 0 && <p>No products added yet.</p>}
         </div>
       </section>
 

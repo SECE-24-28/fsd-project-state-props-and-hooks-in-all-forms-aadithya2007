@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import InfoCard from "./cards/InfoCard";
-import { categories } from "../data/storeData";
+import { apiRequest } from "../api";
+import aboutHeroImage from "../assets/page-images/About.png";
+import aboutStoryImage from "../assets/page-images/about-story.svg";
 import "../CSS/AboutUS.css";
 
 const whyUs = [
   {
     title: "Fresh Products",
     text: "Farm fresh groceries every day.",
-    image: categories[1].image,
   },
   {
     title: "Fast Delivery",
     text: "Quick and safe doorstep delivery.",
-    image: categories[5].image,
   },
   {
     title: "Affordable Prices",
     text: "Best quality at best prices.",
-    image: categories[2].image,
   },
 ];
 
@@ -37,6 +37,14 @@ const reviews = [
 ];
 
 function AboutUs() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    apiRequest("/categories")
+      .then(setCategories)
+      .catch(() => setCategories([]));
+  }, []);
+
   return (
     <main className="page about-page">
       <section className="split-hero">
@@ -51,13 +59,13 @@ function AboutUs() {
           </Link>
         </div>
         <div className="hero-image">
-          <img src={categories[0].image} alt="Fresh fruit basket" />
+          <img src={aboutHeroImage} alt="Fresh groceries" />
         </div>
       </section>
 
       <section className="story">
         <div className="story-image">
-          <img src={categories[1].image} alt="Vegetables" />
+          <img src={aboutStoryImage} alt="Fresh produce" />
         </div>
         <div className="story-text">
           <h2>Our Story</h2>
@@ -75,8 +83,12 @@ function AboutUs() {
       <section className="section centered">
         <h2>Why Choose Us</h2>
         <div className="info-grid">
-          {whyUs.map((item) => (
-            <InfoCard key={item.title} {...item} />
+          {whyUs.map((item, index) => (
+            <InfoCard
+              key={item.title}
+              {...item}
+              image={categories[index]?.image}
+            />
           ))}
         </div>
       </section>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Grocery offers</title>
+  <desc id="desc">Discount tags with fresh grocery items.</desc>
+  <rect width="640" height="360" fill="none"/>
+  <ellipse cx="320" cy="310" rx="218" ry="24" fill="#c9b08a" opacity=".42"/>
+  <path d="M142 88h232l86 86-206 206L56 182z" fill="#7f1100"/>
+  <circle cx="320" cy="134" r="24" fill="#f7ead7"/>
+  <path d="M194 190l98 98M198 280l88-92" stroke="#f7ead7" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="194" cy="190" r="18" fill="#f7ead7"/>
+  <circle cx="292" cy="288" r="18" fill="#f7ead7"/>
+  <circle cx="464" cy="168" r="54" fill="#f0b429"/>
+  <circle cx="524" cy="220" r="42" fill="#d63b28"/>
+  <path d="M434 236c-48-66-20-112 82-116-4 64-30 104-82 116z" fill="#4c9f70"/>
+  <path d="M474 166c-26 62-32 110-18 146" fill="none" stroke="#02332d" stroke-width="8" stroke-linecap="round"/>
+</svg>
