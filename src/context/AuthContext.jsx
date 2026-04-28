@@ -9,20 +9,45 @@ export function AuthProvider({ children }) {
   const login = async (email, password) => {
     const nextAuth = await apiRequest("/users/login", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({
+        email,
+        password,
+      }),
     });
-    localStorage.setItem("vegimartAuth", JSON.stringify(nextAuth));
+
+    localStorage.setItem(
+      "vegimartAuth",
+      JSON.stringify(nextAuth)
+    );
+
     setAuth(nextAuth);
+
     return nextAuth.user;
   };
 
-  const register = async (firstName, lastName, email, password) => {
+  const register = async (
+    firstName,
+    lastName,
+    email,
+    password
+  ) => {
     const nextAuth = await apiRequest("/users/register", {
       method: "POST",
-      body: JSON.stringify({ firstName, lastName, email, password }),
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password,
+      }),
     });
-    localStorage.setItem("vegimartAuth", JSON.stringify(nextAuth));
+
+    localStorage.setItem(
+      "vegimartAuth",
+      JSON.stringify(nextAuth)
+    );
+
     setAuth(nextAuth);
+
     return nextAuth.user;
   };
 
@@ -43,14 +68,20 @@ export function AuthProvider({ children }) {
     [auth]
   );
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={value}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
 
 export function useAuth() {
   const context = useContext(AuthContext);
 
   if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
+    throw new Error(
+      "useAuth must be used within an AuthProvider"
+    );
   }
 
   return context;

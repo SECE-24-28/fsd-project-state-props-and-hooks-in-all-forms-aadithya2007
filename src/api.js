@@ -1,4 +1,4 @@
-const API_URL = "https://backend-9nuv.onrender.com";
+const API_URL = "https://backend-9nuv.onrender.com/api";
 
 export function getStoredAuth() {
   const rawAuth = localStorage.getItem("vegimartAuth");
