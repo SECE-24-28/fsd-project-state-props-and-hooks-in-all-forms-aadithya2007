@@ -5,8 +5,8 @@
     text-align:center;
     box-shadow:0 4px 10px rgba(0,0,0,0.15);
     transition:0.3s;
-    width:130px;
-    height:130px;
+    width:150px;
+    height:180px;
 }
 
 .category-card{
@@ -20,8 +20,8 @@
 }
 
 .product-card img{
-    width:160px;
-    height:160px;
+    width:100px;
+    height:100px;
     object-fit:contain;
 }
 
