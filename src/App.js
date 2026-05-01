@@ -14,8 +14,8 @@ import RegisterPage from "./components/RegisterPage";
 import ShopPage from "./components/ShopPage";
 import CartPage from "./components/CartPage";
 import AdminPanel from "./components/AdminPanel";
-import TermsConditionsPage from "./components/TermsConditionsPage";
-import PrivacyPolicyPage from "./components/PrivacyPolicyPage";
+import TermsConditionsPage from "./components/TermsAndConditions";
+import PrivacyPolicyPage from "./components/PrivacyPolicy";
 
 import { CartProvider } from "./context/CartContext";
 import { AuthProvider, useAuth } from "./context/AuthContext";
